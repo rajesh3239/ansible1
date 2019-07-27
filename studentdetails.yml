@@ -4,7 +4,9 @@
    phone
    email
    employeid
+   Address
  - name
    phone
    email
-   employeid  
+   employeid
+   Address
