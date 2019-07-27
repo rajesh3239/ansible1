@@ -1,0 +1,10 @@
+---
+- StudentDetails
+ - name
+   phone
+   email
+   employeid
+ - name
+   phone
+   email
+   employeid  
