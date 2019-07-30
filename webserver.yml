@@ -5,4 +5,8 @@
   - name: install webserver
     apt: 
       name: apache2
-      state: present  
+      state: present
+  - name: start webserver
+    service:
+      name: apache2
+      state: reloaded
