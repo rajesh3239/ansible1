@@ -5,5 +5,5 @@
   - name: install php language
     apt:
       name: php
-      state: present
-      
+      state: latest
+
