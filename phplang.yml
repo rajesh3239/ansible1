@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install php language
+    apt:
+      name: php
+      state: present
+      
