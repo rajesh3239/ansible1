@@ -1,5 +1,5 @@
 ---
-- hosts: webservers
+- hosts: Webservers
   become: yes
   tasks:
   - name: install webserver on ubuntu16 node
