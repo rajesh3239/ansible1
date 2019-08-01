@@ -1,6 +1,6 @@
 ---
 - hosts: webservers
-  become:
+  become: yes
   tasks:
     - name: install java on ubuntu16
       apt:
