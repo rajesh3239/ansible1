@@ -7,7 +7,7 @@
       name: "{{ webserveronUbuntu }}"
       state: present
     when: ansible_os_family=="Debian"
-    
+
   - name: start webserver of ubuntu16
     service:
       name: "{{ webserveronUbuntu }}"
@@ -16,7 +16,7 @@
 
   - name: install webserver on amazon node
     yum:
-      name: "{{ webserveronamazon }}"
+      name: "{{ webserveronamazon}}"
       state: present
     when: ansible_os_family=="RedHat"
   - name: start webserver on amazon
