@@ -3,13 +3,13 @@
   become: yes
   tasks:
    - name: ppa java jdk
-     apt:
-       name: openjdk-7-jre
+   - apt_repository:
+       repo: ppa:openjdk-r/ppa
        state: present
      when: ansible_os_family=="Debian"   
    - name: update cache
      apt:
-      update_cache: yes
+       update_cache: yes
      when: ansible_os_family=="Debian"
 
    - name: install java7 on ubuntu16
