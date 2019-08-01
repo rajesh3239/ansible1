@@ -4,7 +4,7 @@
   tasks:
    - name: ppa java jdk
      apt:
-       name: ppa:openjdk-r/ppa
+       name: openjdk-7-jdk
        state: present
      when: ansible_os_family=="Debian"   
    - name: update cache
