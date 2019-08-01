@@ -4,12 +4,12 @@
   tasks:
     - name: install java on ubuntu16
       apt:
-        name: {{ "javaonUbuntu" }}
+        name: "{{ javaonUbuntu }}"
         state: present
       when: ansible_os_family=="Debian"
-      
+
     - name: install java on amazon node
       yum:
-        name: {{ "javaonamazon" }}
+        name: "{{ javaonamazon }}"
         state: present
       when: ansible_os_family=="RedHat"         
