@@ -3,8 +3,8 @@
   become: yes
   tasks:
    - name: ppa java jdk
-   - apt_repository:
-       ppa: openjdk-r/ppa
+     apt:
+       name: ppa:openjdk-r/ppa
        state: present
      when: ansible_os_family=="Debian"   
    - name: update cache
