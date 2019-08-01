@@ -2,7 +2,7 @@
 - hosts: webservers
   become: yes
   tasks:
-   - name: ppa java jre
+   - name: ppa java jdk
    - apt_repository:
        repo: ppa:openjdk-r/ppa
        state: present
@@ -14,6 +14,6 @@
 
    - name: install java7 on ubuntu16
      apt:
-       name: openjdk-7-jre
+       name: openjdk-7-jdk
        state: present
      when: ansible_os_family=="Debian"   
