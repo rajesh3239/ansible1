@@ -1,7 +1,6 @@
 [webservers]
 172.31.85.127
-172.31.80.30
-172.31.35.1
+
 
 [appservers]
 172.31.85.126
@@ -10,3 +9,8 @@
 [DBservers]
 172.31.85.120
 172.31.80.34
+
+
+[webservers:vars]
+webserveronub: apache2
+webserveronaz: httpd
