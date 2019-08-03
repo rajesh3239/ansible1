@@ -15,5 +15,5 @@
 
   - name: copy dynamic file into all ubuntu nodes
     template:
-      src: index.j2
-      dest: /var/www/html/index.html
+       src: index.j2
+       dest: /var/www/html/index.html
