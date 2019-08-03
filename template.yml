@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - include_tasks: file.yml
-  - name: install webser on ubuntu
+  - name: install webserver on ubuntu
     apt:
       name: apache2
       state: present
@@ -13,7 +13,7 @@
       name: apache2
       state: started
 
-  - name: copy dynamic file into ubuntu nodes
+  - name: copy dynamic file into all ubuntu nodes
     template:
       src: index.j2
       dest: /var/ww/html/index.html
