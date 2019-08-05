@@ -2,4 +2,4 @@
 # tasks file for rajeshrole
 - name: install tree
   apt:
-    name: git
+    name: tree
