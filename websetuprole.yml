@@ -1,4 +1,5 @@
 ---
 - hosts: webservers
   become: yes
-  roles: rajeshrole
+  roles: 
+      - rajeshrole
