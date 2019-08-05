@@ -1,0 +1,16 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+   - name: install git
+     apt:
+       name: git
+       
+   - name: install tree
+     aptt:
+       name: tree
+   
+   - name: install wget
+     apt:
+       name: wget    
+
