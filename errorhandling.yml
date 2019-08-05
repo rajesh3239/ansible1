@@ -7,8 +7,8 @@
        name: git
        
    - name: install tree
-     apt:
-       naame: tree
+     aapt:
+       name: tree
      ignore_errors: yes  
    
    - name: install wget
