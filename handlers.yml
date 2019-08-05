@@ -1,0 +1,21 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+    - name: install webserver on ubuntu
+      apt:
+        name: apache2
+      notify: restart webservers
+    
+    - name: copy dynamic file into ubuntu nodes
+      template:
+         src: index.j2
+         dest: /var/www/html/index
+      notify: restart webservers
+
+  handlers: 
+   - name: restart webservers
+     service:
+       name: apache2
+       state: restarted   
+
