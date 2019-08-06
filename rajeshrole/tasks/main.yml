@@ -14,7 +14,8 @@
 
 - name: install java7 on ubuntu16
   apt:
-    name: openjdk-7-jdk       
+    name: openjdk-7-jdk  
+         
 - name: install tomcat 7
   apt: 
     name: tomcat7     
