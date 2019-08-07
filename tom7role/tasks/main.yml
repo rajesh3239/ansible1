@@ -30,4 +30,4 @@
   get_url:
      url: https://maha1234.s3-us-west-2.amazonaws.com/mahaLogin.war
      dest: /var/lib/tomcat7/webapps/mahaLogin.war
-     forcce_basic_auth: yes
+     force_basic_auth: yes
