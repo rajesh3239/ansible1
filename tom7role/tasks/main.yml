@@ -1,2 +1,33 @@
 ---
 # tasks file for tom7role
+- name: install tomcat
+  apt:
+    name: tomcat7
+    state: present
+
+- name: java options
+  template:
+    src: tomconfig.j2
+    dest: /etc/default/tomcat7
+  notify: restart tomcat7
+
+- name: additional packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: 
+    - tomcat7-docs
+    - tomcat7-admin
+    - tomcat7-examples  
+
+- name: manage users
+  template:
+    src: usersmng.j2
+    dest: /etc/tomcat7/tomcat-users.xml
+  notify: restart tomcat7
+
+- name: java on all nodes
+  get_url:
+     url: https://maha1234.s3-us-west-2.amazonaws.com/mahaLogin.war
+     dest: /var/lib/tomcat7/webapps/mahaLogin.war
+     forcce_basic_auth: yes
